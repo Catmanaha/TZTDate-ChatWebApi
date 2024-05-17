@@ -11,10 +11,11 @@ public class AddHandler : IRequestHandler<AddCommand>
     public async Task Handle(AddCommand request, CancellationToken cancellationToken)
     {
         await tZTDateDbContext.PrivateChats
-            .AddAsync(new PrivateChat { 
-                PrivateChatHashName = request.NewPrivateChatHashName,
-                Messages = new List<Message>()
-            });
+           .AddAsync(new PrivateChat
+           {
+               PrivateChatHashName = request.NewPrivateChatHashName,
+               Messages = new List<Message>()
+           });
         await tZTDateDbContext.SaveChangesAsync();
     }
 }

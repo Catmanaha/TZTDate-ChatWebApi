@@ -6,7 +6,10 @@ public class TZTDateDbContext : DbContext
     public DbSet<PrivateChat> PrivateChats { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Address> Addresses { get; set; }
-    public TZTDateDbContext(DbContextOptions<TZTDateDbContext> options) : base(options) { }
+    public DbSet<UserRole> UserRoles { get; set; }
+    public TZTDateDbContext(DbContextOptions<TZTDateDbContext> options) : base(options) { 
+    
+    }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

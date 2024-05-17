@@ -24,6 +24,8 @@ public static class DbContextExtensions
                     o.MigrationsAssembly(assembly.FullName);
 
                 });
+
+                options.EnableSensitiveDataLogging();
         });
     }
 }
