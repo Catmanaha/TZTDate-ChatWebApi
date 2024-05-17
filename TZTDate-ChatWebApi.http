@@ -1,0 +1,6 @@
+@TZTDate_ChatWebApi_HostAddress = http://localhost:5143
+
+GET {{TZTDate_ChatWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
